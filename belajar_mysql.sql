@@ -180,3 +180,22 @@ SELECT id,name,price DIV 1000 AS 'PRICE IN K' FROM product;
 SELECT COS(price), SIN(price),  TAN(price) FROM product;
 
 
+# set auto increment
+CREATE  TABLE admin
+(
+    id  INT NOT NULL AUTO_INCREMENT,
+    firs_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    PRIMARY KEY (id)
+)ENGINE=InnoDB;
+DESCRIBE admin;
+
+INSERT INTO admin(firs_name, last_name)
+VALUES ('akbar', 'ardiansyah'),
+       ('ryon j','anggara'),
+       ('doni','aziz'),
+       ('arief','farhan'),
+       ('fuad','bawazier');
+
+SELECT * FROM admin;
+
